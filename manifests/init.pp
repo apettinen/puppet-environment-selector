@@ -20,7 +20,7 @@ class tut_environment_selector ( String $desired_env = 'testing', String $conf_s
     $puppet_cmd = 'puppet config set environment'
     $puppet_cmd_path = "/opt/puppetlabs/puppet/bin/"
   }
-  notify { "komento: $puppet_cmd ja polku: $puppet_cmd_path"}
+  notify { "komento: $puppet_cmd ja polku: $puppet_cmd_path":}
   exec { 'configure_environment':
     command => " $tpuppet_cmd $desired_env --section $conf_section",
     path    => $puppet_cmd_path,
