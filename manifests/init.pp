@@ -22,7 +22,7 @@ class tut_environment_selector ( String $desired_env = 'testing', String $conf_s
   }
   notify { "komento: $puppet_cmd ja polku: $puppet_cmd_path": }
   exec { 'configure_environment':
-    command => " $puppet_cmd $desired_env --section $conf_section",
+    command => "${puppet_cmd} ${desired_env} --section ${conf_section}",
     path    => $puppet_cmd_path,
   }
 }
