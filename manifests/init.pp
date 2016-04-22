@@ -10,17 +10,17 @@
 # Antti Pettinen
 # Copyright: Tampere University of Technology
 if $::operatingsystem == 'windows' {
-  $puppet_cmd = 'puppet.bat config set environment'
-  $puppet_cmd_path = "C:\Program Files\puppet labs\puppet\bin"
+  $puppet_cmd = 'puppet.bat config set environment',
+  $puppet_cmd_path = 'C:\Program Files\puppet labs\puppet\bin',
 }
 else {
-  $puppet_cmd = 'puppet config set environment'
-  $puppet_cmd_path = "/opt/puppetlabs/puppet/bin/"
+  $puppet_cmd = 'puppet config set environment',
+  $puppet_cmd_path = "/opt/puppetlabs/puppet/bin/",
 }
 
 class tut_environment_selector ( String $desired_env = 'testing', String $conf_section = 'agent') {
   exec { 'configure_environment':
-    command => " $puppet_cmd $desired_env --section $conf_section",
-    path    => $puppet_cmd_path,
+    command => " $tut_environment_selector::puppet_cmd $desired_env --section $conf_section",
+    path    => $tut_environment_selector::puppet_cmd_path,
   }
 }
