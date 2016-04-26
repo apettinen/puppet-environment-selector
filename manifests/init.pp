@@ -14,7 +14,7 @@
 class tut_environment_selector ( String $desired_env = 'testing', String $conf_section = 'agent') {
   if $::operatingsystem == 'windows' {
     $puppet_cmd = 'puppet.bat config set environment'
-    $puppet_cmd_path = 'C:\Program Files\puppet labs\puppet\bin'
+    $puppet_cmd_path = 'C:/Program Files/puppet labs/puppet/bin/'
   }
   else {
     $puppet_cmd = 'puppet config set environment'
