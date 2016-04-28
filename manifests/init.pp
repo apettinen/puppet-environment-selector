@@ -21,10 +21,10 @@ class tut_environment_selector ( String $desired_env = 'testing', String $conf_s
     'windows' => 'C:/Program Files/puppet labs/puppet/bin',
     default   => '/opt/puppetlabs/puppet/bin/',
   }
-
-  notify { "Using Puppet command: ${puppet_cmd} from path: ${puppet_cmd_path}":
-    withpath => false,
-  }
+  # 
+  # notify { "Using Puppet command: ${puppet_cmd} from path: ${puppet_cmd_path}":
+  #   withpath => false,
+  # }
   exec { 'configure_environment':
     command => "${puppet_cmd} ${desired_env} --section ${conf_section}",
     path    => $puppet_cmd_path,
