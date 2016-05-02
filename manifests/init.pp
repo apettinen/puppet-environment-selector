@@ -8,7 +8,8 @@
 # - section: puppet config section, defaults to agent
 #
 # Antti Pettinen & Sami Lanu
-# Copyright: Tampere University of Technology, IT-Services
+# Copyright: Tampere University of Technology, IT-Services, 2016
+# Apache-2 License
 
 class tut_environment_selector ( String $desired_env = 'testing', String $conf_section = 'agent') {
 
