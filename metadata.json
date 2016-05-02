@@ -1,0 +1,26 @@
+{
+    "name": "tut-environment-selector",
+    "version": "0.9.0",
+    "author": "Antti Pettinen",
+    "license": "Apache-2.0",
+    "summary": "Module for dynamically setting Puppet environment",
+    "source": "https://tutmac-git.cc.tut.fi/puppet/tut_environment_selector",
+    /*"project_page": "https://forge.puppetlabs.com/examplecorp/mymodule",
+    "issues_url": "https://github.com/examplecorp/examplecorp-mymodule/issues",
+    "tags": ["things", "stuff"],
+    "operatingsystem_support": [
+      {
+      "operatingsystem":"RedHat",
+      "operatingsystemrelease":[ "5.0", "6.0" ]
+      },
+      {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "12.04", "10.04" ]
+      }
+     ],
+    "dependencies": [
+      { "name": "puppetlabs/stdlib", "version_requirement": ">= 3.2.0 < 5.0.0" },
+      { "name": "puppetlabs/firewall", "version_requirement": ">= 0.0.4 < 2.0.0" }
+    ],
+    "data_provider": "hiera"*/
+  }
