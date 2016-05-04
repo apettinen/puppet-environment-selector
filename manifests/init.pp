@@ -18,6 +18,9 @@ class tut_environment_selector (
 
   validate_string($desired_env)
   validate_string($conf_section)
+  if ! ($conf_section in [ 'agent', 'main', 'master', 'user' ]) {
+    fail('Valid puppet.conf sections are agent, main, master, and user.')
+  }
 
   $puppet_cmd = $::operatingsystem ? {
     'windows' => 'puppet.bat config set environment',
