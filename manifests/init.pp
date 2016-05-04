@@ -11,7 +11,13 @@
 # Copyright: Tampere University of Technology, IT-Services, 2016
 # Apache-2 License
 
-class tut_environment_selector ( String $desired_env = 'testing', String $conf_section = 'agent') {
+class tut_environment_selector (
+  String $desired_env  = 'testing',
+  String $conf_section = 'agent'
+  ) {
+
+  validate_string($desired_env)
+  validate_string($conf_section)
 
   $puppet_cmd = $::operatingsystem ? {
     'windows' => 'puppet.bat config set environment',
