@@ -1,0 +1,29 @@
+{
+    "name": "tut_environment_selector",
+    "version": "0.9.0",
+    "author": "Antti Pettinen",
+    "license": "Apache-2.0",
+    "summary": "Module for dynamically setting Puppet environment",
+    "source": "git@github.com:apettinen/puppet-environment-selector.git",
+    "project_page": "https://github.com/apettinen/puppet-environment-selector",
+    "issues_url": "https://github.com/apettinen/puppet-environment-selector/issues",
+    "tags": ["Puppet", "Environment"],
+    "operatingsystem_support": [
+      {
+      "operatingsystem":"OS X (Darwin)",
+      "operatingsystemrelease":[ "10.9", "10.10", "10.11" ]
+      },
+      {
+      "operatingsystem": "RHEL/CentOS",
+      "operatingsystemrelease": [ "7" ]
+      },
+      {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [ "7", "10" ]
+      }
+     ],
+    "dependencies": [
+      { "name": "puppetlabs/stdlib", "version_requirement": ">= 3.2.0 < 5.0.0" }
+    ],
+    "data_provider": "hiera"
+  }
