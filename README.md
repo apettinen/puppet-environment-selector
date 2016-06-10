@@ -27,7 +27,7 @@ Puppet 4.x onwards, not tested with older versions.
 
 ## Usage
 
-Simple example:
+### Simple example:
 
 ```
 node 'my.node.my.org' {
@@ -36,6 +36,18 @@ node 'my.node.my.org' {
     section     => 'agent',
   }
 ```
+
+### Example with Hiera:
+
+myhiera.yaml:
+
+```
+classes:
+- environment_selector
+
+environment_selector::desired_env: "testing"
+```
+
 
 
 ## Development
