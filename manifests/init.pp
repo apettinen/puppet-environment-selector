@@ -9,7 +9,7 @@
 #
 # Antti Pettinen & Sami Lanu
 # Copyright: Tampere University of Technology, IT-Services, 2016
-# Apache-2 License
+# Apache 2.0 License
 
 class tut_environment_selector (
   String $desired_env  = 'testing',
