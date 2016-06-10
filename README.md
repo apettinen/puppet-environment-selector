@@ -1,4 +1,4 @@
-# Puppet Environment Selector
+# TUT Puppet Environment Selector
 
 #### Table of Contents
 
@@ -27,11 +27,13 @@ Puppet 4.x onwards, not tested with older versions.
 
 ## Usage
 
+Defaults for the module are ```desired_env => 'testing'```and ```section => 'agent'```.
+
 ### Simple example:
 
 ```
 node 'my.node.my.org' {
-  class {'environment_selector':
+  class {'tut_environment_selector':
     desired_env => 'testing',
     section     => 'agent',
   }
@@ -43,9 +45,9 @@ myhiera.yaml:
 
 ```
 classes:
-- environment_selector
+- tut_environment_selector
 
-environment_selector::desired_env: "testing"
+tut_environment_selector::desired_env: "testing"
 ```
 
 
